@@ -1,10 +1,9 @@
-const supertest = require('supertest');
+const request = require('supertest');
 const app = require('./index.js');
-const request = supertest(app);
 
-it('Hello World!', done => {
-  expect(1).toBe(1);
-  done();
+test('DOM contains hello world', async () => {
+  const res = await request(app).get('/');
+  expect(res.text).toEqual('Hello World!');
 });
 
 const server = app.listen(3000, function() {
