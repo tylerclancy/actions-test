@@ -8,10 +8,8 @@ app.get('/', function (req, res) {
     res.send('Hello World!')
 });
 
-
-const port = 3000;
-
-app.listen(port, function () {
+app.listen(process.env.PORT, function () {
+  const port = server.address().port;
     console.log('Listening on port:' + port);
 });
 
