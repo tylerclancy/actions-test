@@ -6,9 +6,9 @@ test('DOM contains hello world', async () => {
   expect(res.text).toEqual('Hello World!');
 });
 
-// const server = app.listen(3000, function() {
-//   console.log('running on port 3000!');
-// });
+const server = app.listen(3000, function() {
+  console.log('running on port 3000!');
+});
 
 afterAll(done => {
   server.close();
