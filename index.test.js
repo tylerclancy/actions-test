@@ -2,7 +2,7 @@ const request = require('supertest');
 const app = require('./index.js');
 
 test('DOM contains hello world', async () => {
-  const res = await request(app).get('/test');
+  const res = await request(app).get('/');
   expect(res.text).toEqual('Hello World!');
 });
 
